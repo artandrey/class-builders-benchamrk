@@ -1,5 +1,3 @@
-import { toBuilderMethod } from 'class-constructor';
-
 export class ClassToBeBuilt {
   public id?: number;
   public name?: string;
@@ -16,11 +14,3 @@ export class ClassToBeBuilt {
   public regexp?: RegExp;
   public tuple?: [string, number];
 }
-
-export class ClassConstructorBuilder extends ClassToBeBuilt {
-  static builder = toBuilderMethod(ClassToBeBuilt).classAsOptionals();
-}
-
-const instance = ClassConstructorBuilder.builder().id(1).name('test').build();
-
-console.log(instance);

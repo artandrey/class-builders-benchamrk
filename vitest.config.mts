@@ -5,5 +5,17 @@ export default defineConfig({
     globals: true,
     testTimeout: 15000,
     hookTimeout: 25000,
+
+    benchmark: {
+      include: ['src/tests/**/*.bench.ts'],
+    },
+  },
+
+  esbuild: {
+    tsconfigRaw: {
+      compilerOptions: {
+        useDefineForClassFields: true,
+      },
+    },
   },
 });

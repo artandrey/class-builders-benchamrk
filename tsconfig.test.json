@@ -3,7 +3,9 @@
   "references": [{ "path": "./tsconfig.src.json" }],
   "compilerOptions": {
     "composite": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "lib": ["ES2023"],
+    "useDefineForClassFields": true
   },
-  "include": ["src/tests/**/*.spec.ts"]
+  "include": ["src/tests/**/*.spec.ts", "src/tests/**/*.bench.ts"]
 }

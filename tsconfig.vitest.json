@@ -1,8 +1,5 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "composite": true,
-    "lib": ["ES2023"],
     "target": "ES2023",
     "module": "commonjs",
     "esModuleInterop": true,
@@ -12,7 +9,5 @@
     "outDir": "dist",
     "rootDir": "src",
     "useDefineForClassFields": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["src/**/*.spec.ts", "src/**/*.bench.ts"]
+  }
 }
